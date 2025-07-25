@@ -18,23 +18,24 @@
     <!-- Logo & Name -->
     <div class="text-2xl font-bold text-orange-500 flex items-center gap-2">
       <img src="assets/logo.png" alt="Logo" class="h-8">
-      faugei
     </div>
 
     <!-- Desktop Menu (hidden on mobile) -->
-    <ul class="hidden md:flex gap-6 font-medium">
-      <li><a href="#" class="text-black font-bold">Home</a></li>
-      <li><a href="#" class="text-gray-400">Shop</a></li>
-      <li><a href="#" class="text-gray-400">About us</a></li>
-    </ul>
-
-    <!-- Cart (always visible, but mobile optimized) -->
-    <div class="flex items-center gap-2">
+    <ul class=" md:flex gap-6 font-medium">
+      <li><a href="#" class="hidden md:flex text-black font-bold">Home</a></li>
+      <li><a href="#" class="hidden md:flex text-gray-400">Shop</a></li>
+      <li><a href="#" class="hidden md:flex text-gray-400">About us</a></li>
+      
+      <!-- Cart (always visible, but mobile optimized) -->
+      <div class="flex items-center gap-2">
       <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-orange-500">
         <i class="fas fa-shopping-cart"></i>
         <span class="hidden sm:inline">Cart ($56)</span>
       </a>
     </div>
+    </ul>
+
+    
   </nav>
 </header>
 
