@@ -13,44 +13,59 @@
 
 </head>
 <body class="bg-gray-50 text-gray-800 font-inter">
-  <header class="mx-[150px] ">
-     <!-- Navbar -->
+  <header class="mx-4 lg:mx-[150px]">
   <nav class="flex justify-between items-center p-6">
+    <!-- Logo & Name -->
     <div class="text-2xl font-bold text-orange-500 flex items-center gap-2">
       <img src="assets/logo.png" alt="Logo" class="h-8">
       faugei
     </div>
-    <ul class="flex gap-6 font-medium">
+
+    <!-- Desktop Menu (hidden on mobile) -->
+    <ul class="hidden md:flex gap-6 font-medium">
       <li><a href="#" class="text-black font-bold">Home</a></li>
       <li><a href="#" class="text-gray-400">Shop</a></li>
       <li><a href="#" class="text-gray-400">About us</a></li>
-      <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-orange-500">
-          <i class="fas fa-shopping-cart"></i> Cart ($56)
-        </a>
     </ul>
-  </nav>
-  </header>
 
-  <main class="mx-[150px] ">
+    <!-- Cart (always visible, but mobile optimized) -->
+    <div class="flex items-center gap-2">
+      <a href="#" class="flex items-center gap-1 text-gray-600 hover:text-orange-500">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="hidden sm:inline">Cart ($56)</span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+
+  <main class="mx-4 lg:mx-[150px]">
     
    <!-- Hero Section -->
   <section class="grid grid-cols-1 md:grid-cols-2 items-center py-20">
-    <div>
-      <h1 class="text-5xl font-bold leading-tight font-notoserif">
-        ALWAYS <span class="text-orange-500">FRESH</span><br>
-        <span class="text-orange-500">FLOWERS</span>
-      </h1>
-      <p class="mt-4 text-gray-600">Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh flowers that are perfect for any occasion. </p>
-    </div>
-    <div class="mt-8 md:mt-0">
-      <img src="assets/hero-flower.png" class="w-full max-w-md mx-auto">
-    </div>
-  </section>
+
+  <!-- Image first on mobile, second on desktop -->
+  <div class="order-1 md:order-2 mt-8 md:mt-0">
+    <img src="assets/hero-flower.png" class="w-full max-w-md mx-auto">
+  </div>
+
+  <!-- Content second on mobile, first on desktop -->
+  <div class="order-2 md:order-1 text-left px-6 md:px-0">
+    <h1 class="text-5xl font-bold leading-tight font-notoserif">
+      ALWAYS <span class="text-orange-500">FRESH</span><br>
+      <span class="text-orange-500">FLOWERS</span>
+    </h1>
+    <p class="mt-4 text-gray-600">
+      Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh flowers that are perfect for any occasion.
+    </p>
+  </div>
+</section>
+
 
   <!-- Plants Section -->
   <section class="bg-white py-16 px-4 text-center">
     <h2 class="text-3xl font-bold font-notoserif mb-2"><span class="text-orange-500">Our</span> Plants</h2>
-    <p class="text-gray-600 max-w-2xl mx-auto mb-10">Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</p>
+    <p class="text-gray-600 max-w-2xl mx-auto mb-10" >Indulge your senses with the beauty and fragrance of our fresh flower shop. From <br>classic roses to exotic blooms, we offer a wide variety of fresh.</p>
     
     <!-- Flower Card start-->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-6xl mx-auto">
@@ -165,12 +180,12 @@
     </div>
   </section>
   </main>
-  <>
+ 
      <!-- Join Section -->
   <section class="relative h-[400px] bg-cover bg-center flex items-center justify-center mx-auto"
     style="background-image: url('assets/news-letter-bg.png')">
     <div class="text-center">
-      <h1 class="text-3xl md:text-4xl font-bold text-white mb-6">Join the colorful Bunch</h1>
+      <h1 class="text-3xl md:text-4xl font-bold font-notoserif text-white mb-6">Join the colorful Bunch</h1>
       <div class="flex justify-center">
         <input type="email" placeholder="Write email"
           class="p-2 px-4 w-[250px] md:w-[644px] bg-white">
